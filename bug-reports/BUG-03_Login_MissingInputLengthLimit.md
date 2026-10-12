@@ -1,7 +1,6 @@
 
 # Bug Report: Missing Input Length Limit on Username and Password Fields
 
-- **Bug ID:** BUG-04
 - **Severity:** Medium
 - **Priority:** Medium
 - **Environment:** Web Application (ShadowBank Frontend - Local)
