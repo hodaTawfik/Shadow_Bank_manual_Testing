@@ -1,6 +1,6 @@
 # Bug Title: Raw SQL Queries and Database Stack Trace Exposed on UI during 500 Internal Server Error
 
-- **Bug ID:** BUG-06
+- **Bug ID:** BUG-05
 - **Severity:** Critical (Security Vulnerability & Data Leak)
 - **Priority:** High
 - **Environment:** Web Application (ShadowBank Frontend - Local | Browser: Microsoft Edge)
