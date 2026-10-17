@@ -1,6 +1,6 @@
 # Bug Report: UI Retains Stale Search Results in Table Upon Subsequent Search Failures
 
-- **Bug ID:** BUG-10
+- **Bug ID:** BUG-09
 - **Severity:** Medium
 - **Priority:** High
 - **Component:** Front-End (State Management / UI Refresh)
