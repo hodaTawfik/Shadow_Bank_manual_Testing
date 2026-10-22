@@ -1,54 +1,58 @@
-#  Banking Web Application - Exploratory & Manual QA Testing
+# Banking Web Application - Exploratory & Manual QA Testing
 
-Welcome to the Quality Assurance documentation for the Local Banking Web Application project. This repository contains the complete test artifact deliverables, including exploratory scenarios, test cases execution, bug reports, and testing summary reports.
+![Status](https://img.shields.io/badge/Status-In%20Progress%20%2F%20Active%20Testing-blue)
 
-##  Project Overview
-The objective of this project is to perform end-to-end manual, exploratory, and basic security testing on a full-stack Banking Web Application running in a local environment.
-
-* Target Feature: Authentication, Login System, create users, create accounts, create transactions 
-* Testing Types Covered: Functional, Boundary Value Analysis, Negative Testing, UI Validation, Session Management, and Client-Side Security.
+Welcome to the Quality Assurance documentation for the Local Banking Web Application project (**ShadowBank**). This repository contains test deliverables, including exploratory scenarios, test cases execution, bug reports, and testing summary reports.
 
 ---
 
-##  Original Source Repositories
-The application architecture is divided into two separate repositories managed by the instructor:
-* Frontend Repository: [(https://github.com/Shady1997/shadow_Bank_Frontend_React)]
-* Backend Repository: [https://github.com/Shady1997/-Mobile_Bank_API_RestFul]
-
-
-##  Repository Structure & Documentation
-* Test-Cases/: Contains 20+ comprehensive Test Cases covering functional, security, and edge-case scenarios (.csv / .xlsx).
-* Test-Reports/: Detailed Test Execution Summary Report including pass/fail metrics and test coverage.
-* Bug-Reports/: Detailed documentation of identified critical security and logical defects.
+## Project Status
+> **Note:** This testing suite is currently **Active & Under Continuous Development**. Test cases, automation integration, and defect documentation are being systematically updated.
 
 ---
 
-##  Key Testing Findings & Critical Bugs
-During the exploratory testing phase of the Login feature, several high-severity security and architectural issues were identified:
+## Project Overview
+The objective of this project is to perform end-to-end manual, exploratory, and security testing on a full-stack Banking Web Application running in a local environment.
 
-1. [Critical] Client-Side Only Authentication:
-   * Login logic is handled statically on the UI layer. No HTTP authorization requests are sent to the backend server, and no session cookies/JWT tokens are maintained.
-2. [Medium] Multi-Tab Session Synchronization Failure:
-   * Logging out from one browser tab leaves active user sessions functional in other open tabs.
-3. [Medium] Missing Rate Limiting:
-   * Unlimited failed login attempts allowed without temporary lockout or rate throttling.
+- **Target Features:** Authentication, User Management, Account Creation, and Transaction Operations.
+- **Testing Types Covered:** Functional, Boundary Value Analysis, Negative Testing, UI/UX Validation, Session Management, and Client-Side Security.
 
 ---
 
-##  Tracked Issues & Bug Reports
-Links to the reported issues on the original application repositories / documented bug tickets:
-* 🔗 [Issue #12: Client-side Authentication Bypass & Static Login Logic](Insert Link or Local Markdown path)
-* 🔗 [Issue #15: Missing Character Length Constraints on Input Fields](Insert Link or Local Markdown path)
+## Original Source Repositories
+The application architecture is divided into two separate repositories managed by the course instructor:
+- **Frontend Repository:** [ShadowBank React Frontend](https://github.com/Shady1997/shadow_Bank_Frontend_React)
+- **Backend Repository:** [ShadowBank RESTful API](https://github.com/Shady1997/-Mobile_Bank_API_RestFul)
 
 ---
 
-## 🛠 Tools Used
-* Test Management: Google Sheets
-* Developer Tools: Chrome DevTools (Network Tab, Application Memory & Storage)
-* API Testing: Postman
-* Issue Tracking: GitHub Issues
+## Repository Structure & Deliverables
+- `test-cases/`: Comprehensive Test Cases covering functional, UI, and edge-case scenarios (.csv / .xlsx / Google Sheets).
+- `bug-reports/`: Detailed markdown documentation of identified functional, logical, and security defects.
+- `test-reports/`: Test Execution Summary Report including pass/fail metrics and coverage *(In Progress)*.
 
 ---
 
-Tested & Documented by: Hoda Tawfik  
-Role: Quality Assurance Engineer
+## Key Findings & Critical Vulnerabilities
+
+During testing, several high-severity architectural, security, and logical issues were identified:
+
+- 🚨 **[Critical] Client-Side Only Authentication:** Login logic is handled purely on the front-end without network requests or secure session management. [View Report](./bug-reports/BUG-04_Login_ClientSideAuthenticationOnly.md)
+- 🚨 **[Critical] Data & Schema Exposure:** 500 server errors leak raw SQL statements and H2 internal database schema directly on the UI. [View Report](./bug-reports/BUG-05_CreateAccount_RawSqlDataLeakOnServerError.md)
+- ⚠️ **[High] Missing Rate Limiting:** Unlimited failed login attempts allowed without temporary lockout or throttling. [View Report](./bug-reports/BUG-02_Login_MissingRateLimiting.md)
+
+📂 **[Browse All Bug Reports Folder](./bug-reports/)** — *Check the full directory for functional, UI, and edge-case bug reports.*
+
+---
+
+## 🛠 Tools & Technologies Used
+- **Test Management:** Google Sheets
+- **Environment & Developer Tools:** Chrome DevTools, DevTools Network & Storage Tabs
+- **API Testing:** Postman
+- **Defect Tracking & Version Control:** Git, GitHub Issues, Markdown Documentation
+
+---
+
+**Tested & Documented by:** Hoda Tawfik  
+**Role:** Software Quality Assurance Engineer  
+**Contact:** [Email](mailto:hodaa.tawfik11@gmail.com) | [LinkedIn](https://linkedin.com)
