@@ -34,4 +34,5 @@ The system successfully creates User B with the duplicate phone number, saving d
 
 ### Technical Impact
 Breaks database integrity and affects account recovery or SMS notification features that rely on phone numbers as unique identifiers.
-<img width="1078" height="333" alt="image" src="https://github.com/user-attachments/assets/a9412c94-7e86-4047-8833-9e99dd42af9c" />
+<img width="1053" height="312" alt="image" src="https://github.com/user-attachments/assets/3885be31-ed04-4ef4-b82c-cede4be611c4" />
+
