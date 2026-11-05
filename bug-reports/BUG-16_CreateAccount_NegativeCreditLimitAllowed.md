@@ -33,3 +33,5 @@ The application accepts negative numbers without restriction and persists them a
 
 ### Technical Impact
 Permits illogical financial states and potential calculation errors in transaction authorizations.
+<img width="1081" height="283" alt="image" src="https://github.com/user-attachments/assets/bc3f7dcc-0deb-486f-97a3-095914aa7b16" />
+
